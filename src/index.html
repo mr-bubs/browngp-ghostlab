@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brown GP · Ghost Lab — Canada comparisons</title><meta name="description" content="Compare the 2025 and 2026 Canadian GP Q3 front-row laps with telemetry, constructor liveries and four replay cameras.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101619'/%3E%3Cpath d='M8 24V8h16v5H13v4h9v7' fill='none' stroke='%2358e5cf' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./src/ui/style.css">
+</head>
+<body>
+<header><a class="brand" href="./">BROWN<span>GP</span><i>/</i><small>GHOST LAB</small></a><a class="badge" href="./src/showroom/index.html">SF-26 PREVIEW ↗</a></header>
+<main>
+  <section class="session-picker" aria-label="Choose replay session"><label for="sessionSelect">CANADIAN GP · Q3</label><select id="sessionSelect" aria-label="Replay season" disabled><option>Loading sessions…</option></select><span id="sessionStatus" role="status">Loading lap data</span></section>
+  <section class="heading"><div><p class="eyebrow" id="sessionHeading">CANADIAN GP / Q3</p><h1 id="comparisonTitle">Canada ghost laps.</h1></div><p class="sub">The front row, replayed from real data<br><span>Measured timing &amp; car telemetry · position aligned to circuit</span></p></section>
+  <div class="workspace">
+    <div class="replay-column" id="replayShell">
+      <section class="viewer" aria-label="Interactive three-dimensional track replay">
+        <div id="scene"></div>
+        <div class="view-top"><span class="live-label">CANADA <b id="viewerSession">Q3 GHOST REPLAY</b></span><div class="camera-buttons" role="group" aria-label="Camera"><button data-camera="follow" class="selected">Follow</button><button data-camera="overhead">Top down</button><button data-camera="helmet">Helmet cam</button><button data-camera="onboard">Onboard</button></div></div>
+        <div id="loading">Loading Q3 telemetry…</div><div id="tagA" class="car-label cyan">RUS</div><div id="tagB" class="car-label pink">ANT</div>
+        <div class="gap-overlay"><span>GAP AT SAME DISTANCE</span><strong id="delta">+0.000 <small>s</small></strong><p id="leader">Laps start together</p></div>
+        <div id="cockpitHud" class="cockpit-hud" aria-label="P2 cockpit telemetry"><span id="onboardDriver">P2</span><b><i id="onboardSpeed">—</i> <small>KM/H</small></b><div id="onboardWheel" class="steering-wheel onboard-wheel"><i></i></div><b class="onboard-gear">G <i id="onboardGear">—</i></b><div class="telemetry-bars"><em>THR</em><i class="hud-bar"><b id="onboardThrottle"></b></i><em>BRK</em><i class="hud-bar brake"><b id="onboardBrake"></b></i></div></div>
+        <div class="view-bottom"><div><span class="eyebrow">LAP CLOCK</span><strong id="elapsed">0:00.000</strong></div><canvas id="mini" width="180" height="220" aria-label="Circuit overview and car positions"></canvas><div class="view-note">Measured telemetry<br>Derived steering &amp; load</div></div>
+      </section>
+      <section class="transport" aria-label="Replay controls"><button id="play" class="play" aria-label="Play replay">▶</button><button id="restart" aria-label="Restart replay">↺</button><div class="timeline"><label for="seek"><span>LAP PLAYBACK</span><span id="progress">0% / FINISH</span></label><input id="seek" type="range" min="0" max="72.646" step="0.01" value="0"></div><label class="speed">Speed<select id="speed"><option value="1">0.5×</option><option value="1.5" selected>1×</option><option value="2">2×</option></select></label><button id="fullscreen" class="fullscreen" aria-label="Enter fullscreen" title="Fullscreen replay">⛶</button></section>
+    </div>
+    <aside>
+      <div class="panel-title"><span>Q3 CLASSIFICATION</span><span>REAL TELEMETRY</span></div>
+      <article class="driver a"><div class="driver-top"><span>P1 · #63</span><span class="chip">RUS</span></div><h2>George Russell</h2><p>Mercedes</p><div class="time">1:12.578</div><div class="telemetry"><span><b id="speedA">—</b> km/h</span><span id="gearBoxA">G <b id="gearA">—</b><i id="shiftA"></i></span><span><b id="rpmA">—</b> rpm</span></div><i class="rev-strip"><b id="revA"></b></i><div class="pedals"><div><label>THROTTLE <b id="throttlePctA">0%</b></label><i><b id="throttleA"></b></i></div><div><label>BRAKE <b id="brakePctA">OFF</b></label><i class="brake"><b id="brakeA"></b></i></div></div><div class="steering"><div id="wheelA" class="steering-wheel"><i></i></div><span>DERIVED STEERING<b id="steerA">0°</b></span></div></article>
+      <article class="driver b"><div class="driver-top"><span>P2 · #12</span><span class="chip">ANT</span></div><h2>Kimi Antonelli</h2><p>Mercedes</p><div class="time">1:12.646 <small>+0.068</small></div><div class="telemetry"><span><b id="speedB">—</b> km/h</span><span id="gearBoxB">G <b id="gearB">—</b><i id="shiftB"></i></span><span><b id="rpmB">—</b> rpm</span></div><i class="rev-strip"><b id="revB"></b></i><div class="pedals"><div><label>THROTTLE <b id="throttlePctB">0%</b></label><i><b id="throttleB"></b></i></div><div><label>BRAKE <b id="brakePctB">OFF</b></label><i class="brake"><b id="brakeB"></b></i></div></div><div class="steering"><div id="wheelB" class="steering-wheel"><i></i></div><span>DERIVED STEERING<b id="steerB">0°</b></span></div></article>
+      <section class="corner-compare" aria-live="polite"><div class="corner-title"><span id="cornerState">NEXT CORNER</span><b id="cornerName">T1</b></div><div class="corner-speeds"><span><i>RUS</i><b id="cornerSpeedA">—</b><small>KM/H MIN</small></span><span><i>ANT</i><b id="cornerSpeedB">—</b><small>KM/H MIN</small></span></div><p id="cornerDelta">Minimum-speed comparison</p></section>
+      <div class="options"><label><input type="checkbox" id="trails" checked> Racing-line trails</label><label><input type="checkbox" id="ghost" checked> Translucent comparison car</label><label for="zoom">Camera distance</label><input id="zoom" type="range" min="35" max="160" value="55"></div>
+    </aside>
+  </div>
+  <footer><p><span id="dataNote">Loading session provenance.</span> Position is circuit-aligned; racing lines, steering and load transfer are derived visual reconstructions.</p><details><summary>Data, geometry &amp; credits</summary><p>Timing and telemetry: <a href="https://openf1.org" target="_blank" rel="noreferrer">OpenF1</a>. Classification: Formula 1 official qualifying report. Track and environment map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a>, ODbL. Open-wheel geometry adapted from <a href="https://github.com/markste-in/c42" target="_blank" rel="noreferrer">markste-in/c42</a>, WTFPL, with original materials removed. Environment surfaces: <a href="https://polyhaven.com/license" target="_blank" rel="noreferrer">Poly Haven</a>, CC0. Tree photography: <a href="https://www.cgbookcase.com" target="_blank" rel="noreferrer">CGBookcase</a>, CC0. Both sessions reuse the approved Canada scenery. Constructor paint is a simplified recreation on a shared open-wheel chassis; year-specific bodywork and event scenery are not reproduced. Rendering: Three.js, MIT. Not an official F1 product.</p></details></footer>
+</main>
+<script type="module" src="./src/player/replay.js"></script>
+</body></html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ferrari SF-26 paint study | Brown GP Ghost Lab</title>
+  <meta name="description" content="Inspect the Ferrari 2026 paint study on the Ghost Lab car model and switch driver numbers.">
+  <link rel="stylesheet" href="./style.css">
+</head><body>
+  <header><a href="../../index.html">← GHOST LAB REPLAY</a><span>2026 / LIVERY STUDIO</span></header>
+  <main>
+    <div class="title"><div><p>2026 · FERRARI</p><h1>SF-26 paint study.</h1></div><p class="description">One constructor paint, with the number drawn separately for each driver.</p></div>
+    <section class="viewer" aria-label="Rotatable Ferrari 2026 car preview">
+      <div id="stage" role="img" aria-label="Three-dimensional Ferrari livery recreation on the Ghost Lab car model"></div>
+      <div class="corner-id">SCUDERIA FERRARI<br><small>2026 · SHARED CAR MODEL</small></div>
+      <div id="status" role="status">Loading car model…</div>
+      <div class="hint">DRAG TO ROTATE · PINCH OR SCROLL TO ZOOM</div>
+    </section>
+    <section class="controls" aria-label="Preview controls">
+      <fieldset><legend>DRIVER NUMBER</legend><button class="active" data-number="16" aria-pressed="true">16</button><button data-number="44" aria-pressed="false">44</button></fieldset>
+      <fieldset><legend>CAMERA</legend><button data-angle="threequarter" class="active" aria-pressed="true">Three-quarter</button><button data-angle="top" aria-pressed="false">Top</button><button data-angle="side" aria-pressed="false">Side</button></fieldset>
+    </section>
+    <p class="note">Paint reconstructed from the supplied SF-26 photos. The shape remains Ghost Lab’s shared open-wheel model, so sponsor placement and Ferrari-specific bodywork are approximate. The number is applied from driver data during playback.</p>
+  </main>
+  <script type="module" src="./preview.js"></script>
+</body></html>

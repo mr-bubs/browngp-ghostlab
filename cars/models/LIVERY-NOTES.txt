@@ -1,0 +1,12 @@
+Mercedes reference livery recreation
+
+The existing generic open-wheel model retains its original geometry and licence.
+Its paint is a simplified recreation of the user-supplied Mercedes references:
+silver nose, black body, turquoise trim, silver sidepod stripes, star pattern,
+sponsor lettering and driver numbers 63 and 12. This is not an official Mercedes
+model or an exact reproduction of the constructor's bodywork or sponsor artwork.
+
+mercedes-livery.js creates model-space paint maps once per car. Painting is part
+of each existing body material, so opacity, depth and cockpit stencil masking
+continue to apply without separate overlapping decal objects. No camera,
+telemetry, racing-line or lap-timing changes are included in this update.

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "canada-2025-q3",
+  "year": 2025,
+  "title": "Russell vs Verstappen",
+  "session_key": 9959,
+  "meeting_key": 1263,
+  "circuit": "Circuit Gilles-Villeneuve",
+  "session": "Qualifying",
+  "segment": "Q3",
+  "date": "2025-06-14",
+  "trackId": "montreal-canada-v1",
+  "provenance": {
+    "timing_and_telemetry": "OpenF1",
+    "classification": "https://www.formula1.com/en/results/2025/races/1263/canada/qualifying",
+    "position_note": "Public location samples are similarity-aligned to the locked Canada circuit. Distance is integrated from speed and normalized to exact lap duration. Racing lines are reconstructed."
+  },
+  "laps": [
+    "laps/rus.json",
+    "laps/ver.json"
+  ],
+  "sample_schema": [
+    "seconds",
+    "lap_fraction",
+    "speed_kph",
+    "throttle_pct",
+    "brake",
+    "gear",
+    "rpm",
+    "lateral_m"
+  ]
+}

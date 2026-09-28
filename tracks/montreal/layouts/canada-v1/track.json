@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "montreal-canada-v1",
+  "name": "Circuit Gilles-Villeneuve",
+  "displayName": "Canada",
+  "map": "map.json",
+  "racingLine": "racing-line.json",
+  "environment": "../../scenery/environment.js",
+  "pathSamples": 8192,
+  "trackPhase": 0.022222,
+  "pitStartAnchor": 150,
+  "projection": {
+    "longitudeScale": 78000,
+    "latitudeScale": 111320
+  },
+  "cornerZones": [
+    {
+      "id": "T1",
+      "name": "Senna S entry",
+      "start": 0.038,
+      "end": 0.057
+    },
+    {
+      "id": "T2",
+      "name": "Senna S exit",
+      "start": 0.057,
+      "end": 0.086
+    },
+    {
+      "id": "T3",
+      "name": "Turns 3\u20134 entry",
+      "start": 0.157,
+      "end": 0.179
+    },
+    {
+      "id": "T4",
+      "name": "Turns 3\u20134 exit",
+      "start": 0.179,
+      "end": 0.202
+    },
+    {
+      "id": "T5",
+      "name": "Turn 5",
+      "start": 0.207,
+      "end": 0.241
+    },
+    {
+      "id": "T6",
+      "name": "Turns 6\u20137 entry",
+      "start": 0.268,
+      "end": 0.286
+    },
+    {
+      "id": "T7",
+      "name": "Turns 6\u20137 exit",
+      "start": 0.286,
+      "end": 0.316
+    },
+    {
+      "id": "T8",
+      "name": "Turns 8\u20139 entry",
+      "start": 0.442,
+      "end": 0.459
+    },
+    {
+      "id": "T9",
+      "name": "Turns 8\u20139 exit",
+      "start": 0.459,
+      "end": 0.486
+    },
+    {
+      "id": "T10",
+      "name": "Hairpin",
+      "start": 0.575,
+      "end": 0.652
+    },
+    {
+      "id": "T11",
+      "name": "Hairpin exit kink",
+      "start": 0.703,
+      "end": 0.749
+    },
+    {
+      "id": "T12",
+      "name": "Casino straight kink",
+      "start": 0.792,
+      "end": 0.824
+    },
+    {
+      "id": "T13",
+      "name": "Final chicane entry",
+      "start": 0.861,
+      "end": 0.893
+    },
+    {
+      "id": "T14",
+      "name": "Wall of Champions exit",
+      "start": 0.893,
+      "end": 0.927
+    }
+  ],
+  "visualBaseline": "Approved Canada V4.8 checkpoint",
+  "note": "Shared reconstructed scenery for both seasons; not an exact survey of each race weekend."
+}

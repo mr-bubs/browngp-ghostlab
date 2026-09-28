@@ -1,0 +1,34 @@
+{
+  "version": 4,
+  "session_key": 11287,
+  "meeting_key": 1285,
+  "circuit": "Circuit Gilles-Villeneuve",
+  "session": "Qualifying",
+  "segment": "Q3",
+  "date": "2026-05-23",
+  "sample_schema": [
+    "seconds",
+    "lap_fraction",
+    "speed_kph",
+    "throttle_pct",
+    "brake",
+    "gear",
+    "rpm",
+    "lateral_m"
+  ],
+  "provenance": {
+    "timing_and_telemetry": "OpenF1",
+    "classification": "Formula 1 official qualifying report",
+    "position_note": "Public location samples are similarity-aligned to the circuit model; longitudinal motion follows measured speed and exact lap duration."
+  },
+  "schemaVersion": 1,
+  "id": "canada-2026-q3",
+  "year": 2026,
+  "title": "Russell vs Antonelli",
+  "trackId": "montreal-canada-v1",
+  "laps": [
+    "laps/rus.json",
+    "laps/ant.json"
+  ],
+  "defaultCamera": "follow"
+}

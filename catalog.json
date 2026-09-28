@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "defaultSession": "canada-2025-q3",
+  "tracks": {
+    "montreal-canada-v1": "tracks/montreal/layouts/canada-v1/track.json"
+  },
+  "cars": "cars/registry.json",
+  "sessions": [
+    {
+      "id": "canada-2025-q3",
+      "label": "2025 \u00b7 Russell vs Verstappen",
+      "manifest": "data/2025/canada/qualifying/q3/session.json"
+    },
+    {
+      "id": "canada-2026-q3",
+      "label": "2026 \u00b7 Russell vs Antonelli",
+      "manifest": "data/2026/canada/qualifying/q3/session.json"
+    }
+  ]
+}

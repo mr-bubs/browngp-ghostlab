@@ -1,0 +1,23 @@
+Ground materials: Poly Haven, CC0
+https://polyhaven.com/license
+https://polyhaven.com/a/asphalt_02
+https://polyhaven.com/a/grass_ground
+https://polyhaven.com/a/concrete_floor_02
+Diffuse and OpenGL normal maps, 1K JPEG.
+
+Photographic deciduous tree cutouts: CGBookcase / Dorian Zgraggen, CC0
+https://www.cgbookcase.com/textures/tree-02
+https://www.cgbookcase.com/textures/tree-04
+https://www.cgbookcase.com/textures/tree-05
+https://www.dorianzgraggen.com/projects/cgbookcase/
+
+Circuit geography: OpenStreetMap contributors, ODbL.
+Venue reference: Parc Jean-Drapeau official Circuit Gilles-Villeneuve photos.
+https://www.parcjeandrapeau.com/en/circuit-gilles-villeneuve-multi-purpose-track-provelo-sports-training-montreal/
+Reference photos are not redistributed in the Site.
+
+V4.4 is an authored real-time environment reconstruction, not a laser scan.
+Buildings, water and woodland use the existing mapped footprints. Temporary
+grandstands, race advertising, barriers, gantries and spectator placements are
+approximations. It does not reproduce every detail of the 2026 event.
+The V4.3 Mercedes checkpoint is ec930a5961a17d4031e4af5ad485d762ef216877.

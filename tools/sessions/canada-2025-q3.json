@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "canada-2025-q3",
+  "year": 2025,
+  "title": "Russell vs Verstappen",
+  "session_key": 9959,
+  "meeting_key": 1263,
+  "circuit": "Circuit Gilles-Villeneuve",
+  "session": "Qualifying",
+  "segment": "Q3",
+  "date": "2025-06-14",
+  "trackId": "montreal-canada-v1",
+  "track": "tracks/montreal/layouts/canada-v1/track.json",
+  "output": "data/2025/canada/qualifying/q3",
+  "provenance": {
+    "timing_and_telemetry": "OpenF1",
+    "classification": "https://www.formula1.com/en/results/2025/races/1263/canada/qualifying",
+    "position_note": "Public location samples are similarity-aligned to the locked Canada circuit. Distance is integrated from speed and normalized to exact lap duration. Racing lines are reconstructed."
+  },
+  "drivers": [
+    {"driver_number":63,"code":"RUS","name":"George Russell","surname":"Russell","team":"Mercedes","position":1,"carId":"mercedes-2025","lap_number":20,"start":"2025-06-14T21:06:47.471000+00:00","duration":70.899,"sectors":[19.781,22.281,28.837],"color":"#58e5cf"},
+    {"driver_number":1,"code":"VER","name":"Max Verstappen","surname":"Verstappen","team":"Red Bull Racing","position":2,"carId":"red-bull-2025","lap_number":19,"start":"2025-06-14T21:06:39.003000+00:00","duration":71.059,"sectors":[19.718,22.4,28.941],"color":"#82acff"}
+  ]
+}

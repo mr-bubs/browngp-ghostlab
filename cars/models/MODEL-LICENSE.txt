@@ -1,0 +1,8 @@
+Open-wheel car geometry adapted from markste-in/c42:
+https://github.com/markste-in/c42
+
+The source model is distributed under the Do What The Fuck You Want To Public
+License, Version 2 (WTFPL). The geometry has been simplified, texture resolution
+reduced, original materials removed, and constructor-inspired paint materials applied.
+
+The geometry license is separate from the recreated constructor paint and sponsor names; trademarks remain those of their owners.
