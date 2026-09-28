@@ -2,6 +2,14 @@
   "schemaVersion": 1,
   "note": "Constructor-inspired paint on one shared open-wheel chassis; not exact constructor geometry.",
   "cars": {
+    "mclaren-2026": {
+      "team": "McLaren",
+      "model": "cars/models/open-wheel.glb",
+      "livery": "cars/liveries/2026/mclaren.js",
+      "scale": 0.234,
+      "rotationY": 3.141592653589793,
+      "roughness": 0.4
+    },
     "mercedes-2026": {
       "team": "Mercedes",
       "model": "cars/models/open-wheel.glb",
