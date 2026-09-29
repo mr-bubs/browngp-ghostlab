@@ -5,6 +5,7 @@ import {assetURL} from '../player/catalog.js';
 const stage=document.getElementById('stage'),status=document.getElementById('status');
 const selectedCar=new URL(location.href).searchParams.get('car')||'ferrari-2026';
 const studies={
+  'alpine-2026':{team:'Alpine',name:'BWT ALPINE F1 TEAM',model:'A526',numbers:[10,43],accent:'#ee75b6'},
   'ferrari-2026':{team:'Ferrari',name:'SCUDERIA FERRARI',model:'SF-26',numbers:[16,44],accent:'#ee344b'},
   'mclaren-2026':{team:'McLaren',name:'McLAREN',model:'MCL40',numbers:[1,81],accent:'#ff8700'}
 };

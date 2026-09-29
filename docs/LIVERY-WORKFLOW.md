@@ -14,3 +14,7 @@ For McLaren 2026 and all subsequently supplied constructor references:
 Source references: `MCL40_A_Social_1920x1080.webp`, `MCL40_C_LN_Social_1920x1080.webp`, `MCL40_LN_Allwyn_right_front_3Q.webp`, and `MCL40_LN_Allwyn_side_right.webp`, supplied by the user on 28 September 2026.
 
 Status: website preview approved by the user on 29 September 2026; approved for GitHub commit. The paint recreates the MCL40's papaya, black and teal scheme on the existing shared chassis. Sponsor marks and their positions are approximate; exact MCL40 bodywork and its wheel graphics are not modeled.
+
+## Alpine 2026
+
+A526 paint study reconstructed from the five user-supplied TWJB_BWT_ALPINE_FORMULA_ONE_TEAM-A526 launch references. Approved for GitHub on 29 September 2026. Shared chassis; sponsor shapes and placement are approximate. Numbers 10 and 43 are independent runtime inputs, with opaque isolated showroom materials. Preview: `/src/showroom/index.html?car=alpine-2026`.
