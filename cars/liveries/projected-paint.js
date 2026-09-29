@@ -1,5 +1,5 @@
 import * as T from '../../vendor/three.module.js';
-export function createProjectedPaint(canvases,anisotropy=4){
+export function createProjectedPaint(canvases,anisotropy=4,{engineCoverSide=false}={}){
   const textures={};
   for(const [name,canvas] of Object.entries(canvases)){const t=new T.CanvasTexture(canvas);t.colorSpace=T.SRGBColorSpace;t.flipY=false;t.anisotropy=anisotropy;textures[name]=t;}
   return material=>{
@@ -16,10 +16,13 @@ export function createProjectedPaint(canvases,anisotropy=4){
         vec3 topPaint=texture2D(mercedesTop,tuv).rgb;
         vec3 sidePaint=lp.y<0.0 ? texture2D(mercedesSide,suv).rgb : texture2D(mercedesOpposite,suv).rgb;
         float topWeight=smoothstep(0.35,0.75,abs(ln.z));
+        ${engineCoverSide ? `// Retain continuous side graphics on the sloping engine cover.
+        float engineRegion=smoothstep(-16.5,-15.5,lp.x)*(1.0-smoothstep(-2.8,-2.0,lp.x))*smoothstep(3.7,4.2,-lp.z);
+        topWeight *= 1.0-engineRegion;` : ''}
         diffuseColor.rgb *= mix(sidePaint,topPaint,topWeight);
       `);
     };
-    material.customProgramCacheKey=()=> 'constructor-projected-v1';
+    material.customProgramCacheKey=()=> 'constructor-projected-v2-'+engineCoverSide;
     return material;
   };
 }

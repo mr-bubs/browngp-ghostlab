@@ -15,6 +15,15 @@ Source references: `MCL40_A_Social_1920x1080.webp`, `MCL40_C_LN_Social_1920x1080
 
 Status: website preview approved by the user on 29 September 2026; approved for GitHub commit. The paint recreates the MCL40's papaya, black and teal scheme on the existing shared chassis. Sponsor marks and their positions are approximate; exact MCL40 bodywork and its wheel graphics are not modeled.
 
-## Alpine 2026
+## Red Bull 2026 draft
 
-A526 paint study reconstructed from the five user-supplied TWJB_BWT_ALPINE_FORMULA_ONE_TEAM-A526 launch references. Approved for GitHub on 29 September 2026. Shared chassis; sponsor shapes and placement are approximate. Numbers 10 and 43 are independent runtime inputs, with opaque isolated showroom materials. Preview: `/src/showroom/index.html?car=alpine-2026`.
+Source references: `SI202601150724.webp`, `SI202601150722.webp`, `SI202601150725.webp`, `SI202601150723.webp`, and `SI202601150740.webp`, supplied by the user on 29 September 2026.
+
+Status: local source saved and Sites showroom preview prepared; awaiting approval before GitHub commit. Separate from the existing 2025 Red Bull paint. Runtime numbers 3 and 6 use the same constructor paint, with corrected top/side lettering and opaque showroom materials.
+
+The shared chassis approximates bodywork. The launch scheme uses glossy patterned blue, exposed carbon, yellow nose/airbox, white-edged red bull graphics, Oracle, Ford, Visa, Gate, and other sponsor approximations. Bull silhouettes and sponsor type are authored approximations, not official vector artwork.
+
+## Alpine 2026 preview
+A526 paint study reconstructed from five supplied launch references. Shared chassis; sponsor shapes and placement are approximate. Driver numbers 10 and 43 are independent runtime inputs. Both showroom cars remain opaque with isolated materials. Approved for GitHub on 29 September 2026. Preview: `/src/showroom/index.html?car=alpine-2026`.
+
+Red Bull preview correction (29 September 2026): fit the bull below the air-intake opening, slope its placement to follow the cover, retain side projection over the engine-cover curvature, and place Ford Racing on the rear cover clear of the Red Bull wordmark. Both sides face the bull forward. Approved for GitHub on 29 September 2026.

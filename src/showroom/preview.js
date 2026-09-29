@@ -6,6 +6,7 @@ const stage=document.getElementById('stage'),status=document.getElementById('sta
 const selectedCar=new URL(location.href).searchParams.get('car')||'ferrari-2026';
 const studies={
   'alpine-2026':{team:'Alpine',name:'BWT ALPINE F1 TEAM',model:'A526',numbers:[10,43],accent:'#ee75b6'},
+  'red-bull-2026':{team:'Red Bull Racing',name:'ORACLE RED BULL RACING',model:'Red Bull 2026',numbers:[3,6],accent:'#315bdc'},
   'ferrari-2026':{team:'Ferrari',name:'SCUDERIA FERRARI',model:'SF-26',numbers:[16,44],accent:'#ee344b'},
   'mclaren-2026':{team:'McLaren',name:'McLAREN',model:'MCL40',numbers:[1,81],accent:'#ff8700'}
 };
@@ -46,7 +47,7 @@ for(const car of cars)for(const material of car.materials){if(material.transpare
 cars[1].group.visible=false;status.hidden=true;
 const box=new T.Box3().setFromObject(cars[0].group),center=box.getCenter(new T.Vector3()),size=box.getSize(new T.Vector3());
 const target=new T.Vector3(center.x,Math.max(.8,center.y),center.z);
-let azimuth=.82,elevation=.38,radius=Math.max(size.x,size.z)*1.65,pointer=null;
+let azimuth=.82,elevation=.38,radius=Math.max(size.x,size.z)*1.65;
 function drawCamera(){const h=Math.cos(elevation);camera.position.set(target.x+radius*Math.cos(azimuth)*h,target.y+radius*Math.sin(elevation),target.z+radius*Math.sin(azimuth)*h);camera.lookAt(target);}
 function resize(){renderer.setSize(stage.clientWidth,stage.clientHeight,false);camera.aspect=stage.clientWidth/stage.clientHeight;camera.updateProjectionMatrix();}
 new ResizeObserver(resize).observe(stage);resize();drawCamera();
@@ -62,9 +63,23 @@ document.querySelectorAll('[data-number]').forEach(b=>b.addEventListener('click'
   cars.forEach((car,i)=>car.group.visible=study.numbers[i]===Number(b.dataset.number));
   document.querySelectorAll('[data-number]').forEach(option=>{const active=option===b;option.classList.toggle('active',active);option.setAttribute('aria-pressed',String(active));});
 }));
-stage.addEventListener('pointerdown',e=>{pointer={id:e.pointerId,x:e.clientX,y:e.clientY};stage.setPointerCapture(e.pointerId);});
-stage.addEventListener('pointermove',e=>{if(!pointer||pointer.id!==e.pointerId)return;azimuth+=(e.clientX-pointer.x)*.006;elevation=T.MathUtils.clamp(elevation+(e.clientY-pointer.y)*.005,-.14,1.5);pointer.x=e.clientX;pointer.y=e.clientY;drawCamera();});
-stage.addEventListener('pointerup',()=>{pointer=null;});stage.addEventListener('pointercancel',()=>{pointer=null;});
-stage.addEventListener('wheel',e=>{e.preventDefault();radius=T.MathUtils.clamp(radius*Math.exp(e.deltaY*.001),size.x*.85,size.x*3);drawCamera();},{passive:false});
+const pointers=new Map();
+const carLength=Math.max(size.x,size.z);
+function zoom(factor){radius=T.MathUtils.clamp(radius*factor,carLength*.32,carLength*3);drawCamera();}
+function span(){const [a,b]=[...pointers.values()];return a&&b?Math.hypot(a.x-b.x,a.y-b.y):0;}
+stage.addEventListener('pointerdown',e=>{e.preventDefault();pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});stage.setPointerCapture(e.pointerId);});
+stage.addEventListener('pointermove',e=>{
+ const previous=pointers.get(e.pointerId);if(!previous)return;
+ e.preventDefault();const before=span(),dx=e.clientX-previous.x,dy=e.clientY-previous.y;
+ pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+ if(pointers.size>=2){const after=span();if(before>0&&after>0)zoom(before/after);}
+ else{azimuth+=dx*.006;elevation=T.MathUtils.clamp(elevation+dy*.005,-.14,1.56);drawCamera();}
+});
+for(const type of ['pointerup','pointercancel','lostpointercapture'])stage.addEventListener(type,e=>pointers.delete(e.pointerId));
+stage.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(e.deltaY*.001));},{passive:false});
+document.querySelectorAll('[data-zoom]').forEach(button=>button.addEventListener('click',()=>{
+ if(button.dataset.zoom==='reset'){radius=carLength*1.65;drawCamera();}
+ else zoom(button.dataset.zoom==='in'?.8:1.25);
+}));
 function frame(){requestAnimationFrame(frame);renderer.render(scene,camera);}frame();
 }catch(error){status.textContent=`Could not load the preview: ${error.message}`;console.error(error);}

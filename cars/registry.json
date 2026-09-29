@@ -40,6 +40,14 @@
       "rotationY": 3.141592653589793,
       "roughness": 0.52
     },
+    "red-bull-2026": {
+      "team": "Red Bull Racing",
+      "model": "cars/models/open-wheel.glb",
+      "livery": "cars/liveries/2026/red-bull.js",
+      "scale": 0.234,
+      "rotationY": 3.141592653589793,
+      "roughness": 0.26
+    },
     "alpine-2026": {
       "team": "Alpine",
       "model": "cars/models/open-wheel.glb",
