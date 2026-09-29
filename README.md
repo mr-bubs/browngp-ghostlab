@@ -1,6 +1,6 @@
 # Brown GP Ghost Lab — migration draft
 
-Canada Q3 comparisons for 2025 (Russell / Verstappen) and 2026 (Russell / Antonelli). Choose a replay season above the viewer. Changing sessions reloads the renderer to release the previous session's graphics resources.
+Canada Q3 comparison for 2026 (Russell / Antonelli). The 2025 telemetry remains archived for a future replay once its year-correct constructor liveries are approved.
 
 ## Run
 
@@ -13,7 +13,7 @@ Node 22+ is recommended. Run `npm ci`, `npm run check`, `npm run build`, then `n
 - `tracks/montreal/layouts/canada-v1/`: locked circuit map, racing line, start/finish alignment and corner zones.
 - `tracks/montreal/scenery/`: reusable Canada environment.
 - `cars/registry.json`: maps constructor/year identifiers to model and livery modules.
-- `cars/models/`, `cars/liveries/<year>/<team>.js`: shared geometry and paint modules separated by season. The current 2025 Mercedes file is a checkpoint copy pending 2025 references.
+- `cars/models/`, `cars/liveries/<year>/<team>.js`: shared geometry and paint modules separated by season. Only reviewed, approved year-specific paint modules belong in the registry. The 2025 paint drafts were removed pending correct references.
 - `src/player/`: telemetry sampling, route reconstruction and playback.
 - `src/renderer/`: circuit and car rendering.
 - `src/ui/`: session selection, labels and styles.

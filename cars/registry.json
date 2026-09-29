@@ -17,13 +17,6 @@
       "scale": 0.234,
       "rotationY": 3.141592653589793
     },
-    "mercedes-2025": {
-      "team": "Mercedes",
-      "model": "cars/models/open-wheel.glb",
-      "livery": "cars/liveries/2025/mercedes.js",
-      "scale": 0.234,
-      "rotationY": 3.141592653589793
-    },
     "ferrari-2026": {
       "team": "Ferrari",
       "model": "cars/models/open-wheel.glb",
@@ -31,14 +24,6 @@
       "scale": 0.234,
       "rotationY": 3.141592653589793,
       "roughness": 0.3
-    },
-    "red-bull-2025": {
-      "team": "Red Bull Racing",
-      "model": "cars/models/open-wheel.glb",
-      "livery": "cars/liveries/2025/red-bull.js",
-      "scale": 0.234,
-      "rotationY": 3.141592653589793,
-      "roughness": 0.52
     },
     "red-bull-2026": {
       "team": "Red Bull Racing",

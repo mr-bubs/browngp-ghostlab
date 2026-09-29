@@ -19,7 +19,7 @@ Status: website preview approved by the user on 29 September 2026; approved for 
 
 Source references: `SI202601150724.webp`, `SI202601150722.webp`, `SI202601150725.webp`, `SI202601150723.webp`, and `SI202601150740.webp`, supplied by the user on 29 September 2026.
 
-Status: local source saved and Sites showroom preview prepared; awaiting approval before GitHub commit. Separate from the existing 2025 Red Bull paint. Runtime numbers 3 and 6 use the same constructor paint, with corrected top/side lettering and opaque showroom materials.
+Status: local source saved and Sites showroom preview prepared; awaiting approval before GitHub commit. The incorrect 2025 Red Bull paint has been removed. Runtime numbers 3 and 6 use the same constructor paint, with corrected top/side lettering and opaque showroom materials.
 
 The shared chassis approximates bodywork. The launch scheme uses glossy patterned blue, exposed carbon, yellow nose/airbox, white-edged red bull graphics, Oracle, Ford, Visa, Gate, and other sponsor approximations. Bull silhouettes and sponsor type are authored approximations, not official vector artwork.
 

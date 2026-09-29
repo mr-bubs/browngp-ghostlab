@@ -24,4 +24,4 @@ The replay code reads `catalog.json` and the session manifest. A session points 
 2. Add a circuit's layout and scenery together with its credited source assets. Validate camera clearance, racing line, boundaries and lap alignment before linking a session.
 3. Import each session into its year and event directory, add it to `catalog.json`, and run `npm run check` and `npm run build`. Review the telemetry provenance before publication.
 
-Generated `dist/`, dependency `node_modules/`, import caches, and Sites hosting configuration are excluded from this source repository. The current 2025 Mercedes paint is a checkpoint copy pending 2025 reference images. Ferrari 2026 is a showroom study and has no replay data yet.
+Generated `dist/`, dependency `node_modules/`, import caches, and Sites hosting configuration are excluded from this source repository. The 2025 telemetry is retained, while its unapproved paint drafts and selectable replay are withheld until correct references are supplied. Ferrari 2026 is a showroom study and has no replay data yet.
